@@ -9,3 +9,17 @@
 // Note
 // Preserve the case of the first character in the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
 
+function myReplace(str, before, after) {
+    //console.log(before.length);
+    if(str.indexOf(before) > 0){
+      let words = str.split(" ");
+      if(words[words.indexOf(before)][0] === words[words.indexOf(before)][0].toUpperCase()){
+        words[words.indexOf(before)] = after[0].toUpperCase() + after.slice(1); // replace with capital letter if the before parameter has a capital letter
+      } else {
+        words[words.indexOf(before)] = after;
+      }
+      return words.join(" ");
+    }
+  }
+  
+  myReplace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped");
