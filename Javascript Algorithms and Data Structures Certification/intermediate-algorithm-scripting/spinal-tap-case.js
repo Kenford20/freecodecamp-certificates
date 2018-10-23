@@ -15,7 +15,7 @@ function spinalCase(str) {
         }
       }
     }
-    return chars.join("").split(/\W/).join("-").toLowerCase();
+    return chars.join("").split(/\W/ig).join("-").toLowerCase();
   }
   
-  spinalCase("The_Andy_Griffith_Show");
+  console.log(spinalCase("The_Andy_Griffith_Showwwww"));
