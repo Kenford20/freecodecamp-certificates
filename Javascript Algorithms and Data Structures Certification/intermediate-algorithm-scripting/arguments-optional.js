@@ -10,3 +10,26 @@
 
 // If either argument isn't a valid number, return undefined.
 
+function addTogether(...args) {
+  // two arguments initially
+  if(args.length === 2){
+      if(typeof args[0] !== "number" || typeof args[1] !== "number"){
+        return undefined
+      }
+      return args[0] + args[1]; // sum the two arguments if theyre numbers
+  }
+  // one argument initially
+  else if(typeof args[0] !== "number"){
+      return undefined
+  }
+  // currying function for second argument
+  return function(arg2){ 
+      if(typeof arg2 !== "number"){
+        return undefined
+      }
+      return args[0] + arg2 // sum first and second arguments if theyre numbers
+  }
+}
+
+console.log(addTogether(2)([3]));
+
