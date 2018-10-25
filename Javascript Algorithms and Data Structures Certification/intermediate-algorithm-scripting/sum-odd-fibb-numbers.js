@@ -4,3 +4,23 @@
 
 // For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5.
 
+function sumFibs(num) {  
+    // initial fib values
+    let fibSum = 2;
+    let prevNum = 1;
+    let currentNum = 1;
+    let result = 0;
+  
+    while(num >= result){
+      if(result % 2 === 1){ fibSum += result; } // sum the result if its odd
+
+      // produce fib sequence
+      result = prevNum + currentNum;
+      prevNum = currentNum;
+      currentNum = result;
+    }
+    return fibSum;
+  }
+  
+  console.log(sumFibs(75025));
+  
