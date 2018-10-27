@@ -18,7 +18,7 @@ function sumPrimes(num) {
       }
       // only comes to this point if i is prime
       if(i <= num){
-      primeSum += i;
+        primeSum += i;
       }
     }
     return primeSum;
