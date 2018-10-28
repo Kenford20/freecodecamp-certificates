@@ -11,3 +11,20 @@
 
 // For this challenge you will be presented with a string such as 800-692-7753 or 8oo-six427676;laskdjf. Your job is to validate or reject the US phone number based on any combination of the formats provided above. The area code is required. If the country code is provided, you must confirm that the country code is 1. Return true if the string is a valid US phone number; otherwise return false.
 
+function telephoneCheck(str) {
+    // Good luck!
+  
+    // may start with 1: ^[1]*
+    // may have dashes between sets of digits: [-]*
+    // may have spaces between sets of digits: (space)*
+    // may have parentheses around the area code: (\d{3}|\(\d{3}\))
+    // only takes 10-16 characters: ^[1]* at the beginning
+    // only takes 10-16 characters: \d{4}$ at the end to handle phone numbers with too many or too little characters
+    let validPhoneNumberRegex = /^[1]*[-]* *(\d{3}|\(\d{3}\))[-]* *\d{3}[-]* *\d{4}$/
+    console.log("digits check: " +validPhoneNumberRegex.test("1 123 456 7890"))
+    console.log("digits check2: " +validPhoneNumberRegex.test("1 (123)-456-7890"))
+  
+    return (validPhoneNumberRegex.test(str));
+  }
+  
+  console.log("valid telephone number: " +telephoneCheck("555-555-5555"));
