@@ -6,20 +6,20 @@
 
 function sumFibs(num) {  
     // initial fib values
-    let fibSum = 2;
+    let fibOddSum = 2;
     let prevNum = 1;
     let currentNum = 1;
     let result = 0;
   
     while(num >= result){
-      if(result % 2 === 1){ fibSum += result; } // sum the result if its odd
+      if(result % 2 === 1){ fibOddSum += result; } // sum the result if its odd
 
       // produce fib sequence
       result = prevNum + currentNum;
       prevNum = currentNum;
       currentNum = result;
     }
-    return fibSum;
+    return fibOddSum;
   }
   
   console.log(sumFibs(75025));
