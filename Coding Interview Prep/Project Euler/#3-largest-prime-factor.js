@@ -31,4 +31,4 @@ function largestPrimeFactor(number) {
 // largestPrimeFactor(5) should return 5.
 // largestPrimeFactor(7) should return 7.
 // largestPrimeFactor(13195) should return 29.
-// largestPrimeFactor(600851475143) should return 6857. // doesnt work for this case :c (overflow issues or something?)
+// largestPrimeFactor(600851475143) should return 6857. // solution is too inefficient for these cases :c
