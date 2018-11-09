@@ -10,8 +10,8 @@ function translatePigLatin(str) {
     if(str[0] === "a" || str[0] === "e" || str[0] === "i" || str[0] === "o" || str[0] === "u")
       return str + "way"
     
-    if(!str.includes("a") && !str.includes("e") && !str.includes("i") && !str.includes("o") && !str.includes("u"))
-      return str + "ay";
+    //if(!str.includes("a") && !str.includes("e") && !str.includes("i") && !str.includes("o") && !str.includes("u"))
+    //  return str + "ay";
   
      let consonantClusterLength = 1;
      let clusterLetters = '';
